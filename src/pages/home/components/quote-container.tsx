@@ -26,7 +26,7 @@ export const QuoteContainer: React.FC<QuoteContainerProps> = ({ children }) => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
-    <Container mt={4} maxW="container.lg">
+    <Container mt={4} maxW="container.xl">
       <Stack bg="#f1f1f1" p={4} borderRadius="md">
         <Flex justifyContent="space-between" alignItems="center">
           <Heading as="h5" size="sm" color="#5F6CAF">

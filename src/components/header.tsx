@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -10,9 +11,11 @@ export const Header = () => {
       paddingX={4}
       color="white"
     >
-      <Text fontSize="lg" fontWeight="bold">
-        Wet Bat
-      </Text>
+      <Link to="/">
+        <Text fontSize="lg" fontWeight="bold">
+          Wet Bat
+        </Text>
+      </Link>
 
       <Text>Find your quotes</Text>
     </Flex>

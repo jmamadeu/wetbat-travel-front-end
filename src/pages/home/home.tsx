@@ -9,6 +9,8 @@ import {
   Thead,
   Tr
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
 import { useApiFetchQuotes } from "../../services/api/quote/use-api-fetch-quotes";
 import { formatDate } from "../../utils/formate-date";
 import { QuoteContainer } from "./components/quote-container";
@@ -52,6 +54,7 @@ function HomePage() {
               <Th>Traveler's number</Th>
               <Th>Transportation</Th>
               <Th>Name</Th>
+              <Th></Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -71,6 +74,9 @@ function HomePage() {
                 <Td>{quote.travelers}</Td>
                 <Td>{quote.transportation}</Td>
                 <Td>{quote.name}</Td>
+                <Td>
+                  <Link to={`/quotes/${quote.id}`}>See more</Link>
+                </Td>
               </Tr>
             ))}
           </Tbody>
