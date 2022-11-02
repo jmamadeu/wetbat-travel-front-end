@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import { apiInstance } from "../api-instance"
 
 export const fetchQuotes = async () => {
-  const response = await apiInstance.get<API.Quote.Response>("/quotes")
+  const response = await apiInstance.get<Array<API.Quote.Response>>("/quotes")
 
   return response.data
 }

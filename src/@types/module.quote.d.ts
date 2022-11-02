@@ -5,8 +5,8 @@ declare namespace Module {
         id: string
         from: string
         destination: string
-        depart_date: Date
-        return_date: Date
+        depart_date: string
+        return_date: string
         travelers: number
         transportation: string
         name: string

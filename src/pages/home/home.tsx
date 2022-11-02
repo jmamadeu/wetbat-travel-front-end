@@ -75,7 +75,12 @@ function HomePage() {
                 <Td>{quote.transportation}</Td>
                 <Td>{quote.name}</Td>
                 <Td>
-                  <Link to={`/quotes/${quote.id}`}>See more</Link>
+                  <Link
+                    state={quotes.find((q) => q.id === quote.id)}
+                    to={`/quotes/${quote.id}`}
+                  >
+                    See more
+                  </Link>
                 </Td>
               </Tr>
             ))}
