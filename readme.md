@@ -5,32 +5,47 @@
 ![Preview](https://media.giphy.com/media/iznYv4xudKV2KPeBW9/giphy.gif)
 
 <img src="./.github/01.png" />
+<img src="./.github/02.png" />
+<img src="./.github/03.png" />
 
 ## Tech stack
-- [React]
+- [ReactJS](https://beta.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
-## Design
-You can find the [figma design here](https://www.figma.com/file/m9IyJJrhadeUoPqxxXbDnS/ToDo-List-(Copy))
+## Some features
+- Optimistic updates
+- High Form validation
+- Caching server data
 
-# How to run
 
-To run this web app you must need to install
+# SetUp
+
+This we app was made with [Vitejs](https://vitejs.dev/guide/), for more details take a look at the documentation.
+
+You need to install:
 
 >You've Probably already installed it
 
 - [NodeJS](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/) Optional
-- [Expo](https://docs.expo.dev/get-started/installation/)
+- [Yarn](https://yarnpkg.com/)  #optional (you can use npm)
 
-`Clone the repo` using `https, ssh or even cli` it's up to you, once you clonned it
+
+# How to run
+
+> Att: this web app needs a backend, I've already built that, so go [setup the API](https://github.com/jmamadeu/wetbat-travel-backend)
+
+Clone the repo using `https, ssh or even github-cli`.
+
+Create `.env.local` file and add `VITE_BASE_API_URL=http://localhost:3000/api/v1` which is the default API endpoint.
+
+> Since this app was built with `vite.js` it'll run at [http://127.0.0.1:5173/](http://127.0.0.1:5173/) by default
 
 ```bash
 $ yarn # To install the dependencies
-$ cd ios && pod install & cd .. # To install pods
-$ npx expo start # to run the app
+$ yarn dev # run the project
 ```
 
-> If you want to run it with your phone, you need to install `Expo Go`, you can find on `App Store` or `Play Store`
+# Contributions
+- Feel free to open a `PR`
 
-Made with :heart: by [João Amadeu](https://twitter.com/jmamadeu), feel free to reach me out.
+Made with :heart: by [João Amadeu](https://twitter.com/jmamadeu), feel free to DM me.
