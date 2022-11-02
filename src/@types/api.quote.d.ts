@@ -5,5 +5,7 @@ declare namespace API {
     type GetByIdParams = {
       id: Module.Quote.Type["id"]
     }
+
+    type AddParams = Omit<Module.Quote.Type, "id">
   }
 }

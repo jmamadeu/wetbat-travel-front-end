@@ -46,7 +46,7 @@ function HomePage() {
   return (
     <QuoteContainer>
       <TableContainer>
-        <Table variant="simple">
+        <Table variant="striped">
           <Thead>
             <Tr>
               <Th>From/Destination</Th>

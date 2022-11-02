@@ -1,22 +1,14 @@
 import {
   Button,
   Container,
-  Flex,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Modal,
+  Flex, Heading, Modal,
   ModalBody,
   ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  SimpleGrid,
-  Stack,
+  ModalContent, ModalHeader,
+  ModalOverlay, Stack,
   useDisclosure
 } from "@chakra-ui/react";
+import { QuoteSaveForm } from "./quote-save-form";
 
 type QuoteContainerProps = {
   children: React.ReactNode;
@@ -27,7 +19,7 @@ export const QuoteContainer: React.FC<QuoteContainerProps> = ({ children }) => {
 
   return (
     <Container mt={4} maxW="container.xl">
-      <Stack bg="#f1f1f1" p={4} borderRadius="md">
+      <Stack  p={4} borderRadius="md">
         <Flex justifyContent="space-between" alignItems="center">
           <Heading as="h5" size="sm" color="#5F6CAF">
             My quotes
@@ -48,57 +40,11 @@ export const QuoteContainer: React.FC<QuoteContainerProps> = ({ children }) => {
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Add new quote</ModalHeader>
+          <ModalHeader>Save Quote</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Stack as="form">
-              <FormControl>
-                <FormLabel>Enter your name </FormLabel>
-                <Input placeholder="Your name" type="text" />
-              </FormControl>
-
-              <SimpleGrid columns={2} gap={2}>
-                <FormControl>
-                  <FormLabel>Departure location</FormLabel>
-                  <Input placeholder="Airport name" type="text" />
-                </FormControl>
-
-                <FormControl>
-                  <FormLabel>Destination location</FormLabel>
-                  <Input placeholder="Airport name" type="text" />
-                </FormControl>
-              </SimpleGrid>
-
-              <SimpleGrid columns={2} gap={2}>
-                <FormControl>
-                  <FormLabel>Departure date</FormLabel>
-                  <Input type="date" />
-                </FormControl>
-
-                <FormControl>
-                  <FormLabel>Return date</FormLabel>
-                  <Input type="date" />
-                </FormControl>
-              </SimpleGrid>
-
-              <SimpleGrid columns={2} gap={2}>
-                <FormControl>
-                  <FormLabel>Number of travelers</FormLabel>
-                  <Input type="number" />
-                </FormControl>
-
-                <FormControl>
-                  <FormLabel>Transportation (rental car, etc)</FormLabel>
-                  <Input type="text" />
-                </FormControl>
-              </SimpleGrid>
-            </Stack>
+            <QuoteSaveForm onSuccess={onClose} />
           </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="green" color="white">
-              Save
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </Container>
